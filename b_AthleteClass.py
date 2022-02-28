@@ -1,6 +1,5 @@
-
 class Athlete:
-    def __init__(self,ht,wt,bodyfat):
+    def __init__(self, ht, wt, bodyfat):
         self.__ht = ht
         self.__wt = wt
         self.__bf = bodyfat
@@ -15,30 +14,18 @@ class Athlete:
         return self.__bf
 
 
-
 class Football_Player(Athlete):
+    def __init__(self, ht, wt, bodyfat, position, team):
 
-    def __init__(self,ht,wt,bodyfat,position,team):
+        Athlete.__init__(self, ht, wt, bodyfat)  # this creates the other
 
-        Athlete.__init__(self,ht,wt,bodyfat)
-
-        self.__position = position
+        self.__position = (
+            position  # other attributes recorded to the football plater superclass
+        )
         self.__team = team
 
-
-    def get_position(self):
+    def get_position(self):  # don't need to define things lready defined in superclass
         return self.__position
 
     def get_team(self):
         return self.__team
-
-
-
-
-
-
-
-
-
-
-    
